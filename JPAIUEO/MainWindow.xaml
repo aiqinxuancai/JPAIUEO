@@ -1,0 +1,50 @@
+﻿<Controls:MetroWindow x:Class="JPAIUEO.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:MahAppsBehaviors="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:JPAIUEO"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="105" Width="180" Background="#7FFFFFFF"  AllowsTransparency="True" WindowStyle="None" ShowInTaskbar="False" Topmost="True" ShowMinButton="False" ShowMaxRestoreButton="False" ShowCloseButton="False" ShowTitleBar="False" UseNoneWindowStyle="True" OverlayBrush="Black" NonActiveBorderBrush="#00808080" ResizeMode="NoResize" SaveWindowPosition="True" >
+
+    <Grid >
+        <WrapPanel Margin="0,0,0,32">
+            <TextBlock x:Name="textBlockMain" HorizontalAlignment="Left" TextWrapping="Wrap" Text="あ" VerticalAlignment="Top" Height="70" Width="60" TextAlignment="Center" FontSize="60" MouseMove="textBlockMain_MouseMove" Foreground="#FF363636" MouseLeftButtonDown="textBlockMain_MouseLeftButtonDown"/>
+            <StackPanel Width="40" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Margin="3,0,0,0"  >
+                <TextBlock x:Name="textBlockMainPianJia" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ア" VerticalAlignment="Top" Height="40" Width="40" TextAlignment="Center" FontSize="30" MouseMove="textBlockMain_MouseMove" Foreground="#FF363636"/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="3,0,0,0" >
+                <Border BorderThickness="1" BorderBrush="#FF7FC3FB">
+                    <TextBlock x:Name="textBlockMainLuoMa" HorizontalAlignment="Left" TextWrapping="Wrap" Text="a" VerticalAlignment="Top" Height="35" TextAlignment="Center" FontSize="24" MouseMove="textBlockMain_MouseMove" TextDecorations="{x:Null}" Foreground="#00363636" MinWidth="40" MouseEnter="textBlockMainLuoMa_MouseEnter" MouseLeave="textBlockMainLuoMa_MouseLeave"/>
+                </Border>
+            </StackPanel>
+
+        </WrapPanel>
+        <WrapPanel Margin="0,73,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Controls:TransitioningContentControl x:Name="transitioning"
+                                                  Transition="Left" Height="32" RenderTransformOrigin="0.5,0.5" Width="176" >
+            </Controls:TransitioningContentControl>
+        </WrapPanel>
+        <StackPanel Grid.Row="0" Grid.Column="3">
+            <StackPanel.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/FlatButton.xaml" />
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+            </StackPanel.Resources>
+            <Button x:Name="btnMenuMain" Content="{iconPacks:PackIconMaterial MenuDown, Width=12, Height=12}" Background="Transparent" Margin="145,0,0,0" Foreground="#FF363636" Click="btnMenuMain_Click" >
+                <Button.ContextMenu>
+                    <ContextMenu x:Name="menuMain">
+                        <MenuItem x:Name="menuMainClose" Header="Exit" Click="menuMainClose_Click"/>
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
+        </StackPanel>
+        
+    </Grid>
+</Controls:MetroWindow>
