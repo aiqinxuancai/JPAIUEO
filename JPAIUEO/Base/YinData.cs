@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Newtonsoft;
 using Newtonsoft.Json;
 using System.IO;
+using Newtonsoft.Json.Linq;
 
 namespace JPAIUEO.Base
 {
@@ -15,6 +16,7 @@ namespace JPAIUEO.Base
         public string ping { get; set; }
         public string pian { get; set; }
         public string luoma { get; set; }
+        public string baseLine { get; set; }
     }
 
     
@@ -25,35 +27,64 @@ namespace JPAIUEO.Base
 
         public static void InitData()
         {
-            //listYin.Add(new Yin { ping = "あ",  pian = , luoma = "a"  });
-            var text = Properties.Resources.YinText.Replace("\r", "");
-            var data = text.Split("\n".ToCharArray());
-
-            for ( int i = 0; i < data.Length; i++)
+            JObject root = JObject.Parse(Properties.Resources.data);
+            foreach (var item in root)
             {
-                Yin y = new Yin { ping = data[i], pian = data[i + 1], luoma = data[i + 2] };
-
-                listYin.Add(y);
-
-                i = i + 2;
-
+                foreach (JObject yin in item.Value)
+                {
+                    Yin y = new Yin { ping = yin["ping"].ToString(),
+                        pian = yin["pian"].ToString(),
+                        luoma = yin["luoma"].ToString(),
+                        baseLine = item.Key
+                    };
+                    listYin.Add(y);
+                }
             }
+            //PingToYinText("イカくつした");
 
-            //var jsonVer = JsonConvert.SerializeObject(listYin);
-            //File.WriteAllText("data.json", jsonVer);
-            
-            //JsonConvert.DeserializeObject<Yin[]>(jsonVer)
 
-            //GetYin("a");
         }
 
         public static Yin GetYin(string _luoma)
         {
             var yin = (Yin)listYin.ToArray().First(e => ((Yin)e).luoma == _luoma);
-            //var data = from Yin y in listYin where y.luoma == _luoma select y;
             return yin;
         }
 
+        /// <summary>
+        /// 根据平假名片假名获取其音
+        /// </summary>
+        /// <param name="_ping"></param>
+        /// <returns></returns>
+        public static Yin PingToYin(string _ping)
+        {
+            var yin = (Yin)listYin.ToArray().FirstOrDefault(e => ((Yin)e).ping == _ping || ((Yin)e).pian == _ping);
+            //var data = from Yin y in listYin where y.luoma == _luoma select y;
+
+            return yin;
+        }
+
+        /// <summary>
+        /// 用于完整翻译平假名文本串到音字符串 如果有失败 则返回空
+        /// </summary>
+        /// <param name="_luoma"></param>
+        /// <returns></returns>
+        public static string PingToYinText(string _text)
+        {
+            string full = "";
+            foreach (var item in _text) 
+            {
+                var yin = PingToYin(item.ToString());
+                if (yin != null)
+                    return "";
+            }
+            return full;
+        }
+
+        /// <summary>
+        /// 随机取一个音
+        /// </summary>
+        /// <returns></returns>
         public static Yin GetYinRandom()
         {
             Random a = new Random();

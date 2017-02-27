@@ -61,6 +61,161 @@ namespace JPAIUEO.Properties {
         }
         
         /// <summary>
+        ///   查找类似 イカ/乌贼◎
+        ///かう/买う◎
+        ///めさす/目指す②
+        ///たたかう/戦う◎
+        ///おく/置く置く②
+        ///アイス/ice①
+        ///きたい/期待期待
+        ///ここ◎
+        ///きこく/帰国
+        ///ちかく/近く
+        ///きかい/机械
+        ///そこく/祖国
+        ///しお/塩
+        ///しあい/试合
+        ///ちしき/知识
+        ///かお/颜
+        ///たいせつ/大切
+        ///あいて/相手
+        ///くつした/靴下
+        ///てあし/手足
+        ///きおく/记忆
+        ///せかい/世界
+        ///くけい/矩形
+        ///あと/後
+        ///てあて/手当て
+        ///くう/食う
+        ///あさい/浅い
+        ///いたい/痛い
+        ///くい/悔い
+        ///きそ/基础
+        ///とくい/得意
+        ///いく/行く
+        ///あす/明日
+        ///とち/土地
+        ///ココア/cocoa
+        ///しき/四季
+        ///とけい/时计
+        ///けいき/景気
+        ///あし/脚
+        ///いと/意図
+        ///こく/浓く
+        ///うし/牛
+        ///ちかう/誓う
+        ///こえ/声
+        ///こし/腰
+        ///うち/内
+        ///こい/鲤
+        ///おす/推す
+        ///つくえ/机
+        ///すくう/救う
+        ///きそく/规则
+        ///きせき/奇迹
+        ///おたく/お宅
+        ///つかう/使う
+        ///きく/闻く
+        ///しかく/资格 的本地化字符串。
+        /// </summary>
+        internal static string danci1 {
+            get {
+                return ResourceManager.GetString("danci1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 あ行单词总结： 
+        ///
+        ///あ ア 
+        ///● 雨（あめ）① 雨 
+        ///● 飴（あめ）② 糖 
+        ///● 挨拶（あいさつ）① 招呼 
+        ///● 赤い（あかい）② 红的 
+        ///● 青い（あおい）② 蓝的，绿的，苍白的 
+        ///
+        ///い イ 
+        ///● 家（いえ）② 家 
+        ///● 椅子（いし）○ 0 椅子 
+        ///● 糸（いと）① 线，丝 
+        ///● 犬（いぬ）② 狗 
+        ///● 石（いし）② 石头 
+        ///
+        ///う ウ 
+        ///● 牛（うし）② 牛 
+        ///● 歌う（うたう）③ 唱歌 
+        ///● 嬉しい（うれしい）③ 欢喜的，高兴的，喜悦的 
+        ///● 海（うみ）① 海，大海 
+        ///● 馬（うま）② 马 
+        ///
+        ///え エ 
+        ///● 絵（え）① 画，图画 
+        ///● 映画（えいが）○ 0 电影 
+        ///● 遠足（えんそく）○ 0 远足，郊游，（徒步）旅游 
+        ///● 演奏（えんそう）○ 0 演奏 
+        ///● 演出（えんしゅつ）○ 0 演出，表演 
+        ///
+        ///お オ 
+        ///● 思う（おもう）② 想，认为，打算 
+        ///● 男（おとこ）③ 男子，男人 
+        ///● 女（おんな）③ 女子，女人 
+        ///● 起きる（おきる）② 起床，起来 
+        ///● 温泉（おんせん）○ 0 温泉 
+        ///
+        ///绕口令练习： 
+        ///あえい あおう あえいう [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string danci2 {
+            get {
+                return ResourceManager.GetString("danci2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 {
+        ///    &quot;a&quot;: [
+        ///        {
+        ///            &quot;ping&quot;: &quot;あ&quot;,
+        ///            &quot;pian&quot;: &quot;ア&quot;,
+        ///            &quot;luoma&quot;: &quot;a&quot;
+        ///        },
+        ///        {
+        ///            &quot;ping&quot;: &quot;い&quot;,
+        ///            &quot;pian&quot;: &quot;イ&quot;,
+        ///            &quot;luoma&quot;: &quot;i&quot;
+        ///        },
+        ///        {
+        ///            &quot;ping&quot;: &quot;う&quot;,
+        ///            &quot;pian&quot;: &quot;ウ&quot;,
+        ///            &quot;luoma&quot;: &quot;u&quot;
+        ///        },
+        ///        {
+        ///            &quot;ping&quot;: &quot;え&quot;,
+        ///            &quot;pian&quot;: &quot;エ&quot;,
+        ///            &quot;luoma&quot;: &quot;e&quot;
+        ///        },
+        ///        {
+        ///            &quot;ping&quot;: &quot;お&quot;,
+        ///            &quot;pian&quot;: &quot;オ&quot;,
+        ///            &quot;luoma&quot;: &quot;o&quot;
+        ///     [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string data {
+            get {
+                return ResourceManager.GetString("data", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似  的本地化字符串。
+        /// </summary>
+        internal static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 あ
         ///ア
         ///a

@@ -17,6 +17,7 @@ namespace JPAIUEO
         public App()
         {
             YinData.InitData();
+            DocData.InitData();
         }
         
     }
