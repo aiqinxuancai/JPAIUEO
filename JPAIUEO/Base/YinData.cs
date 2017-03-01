@@ -75,8 +75,13 @@ namespace JPAIUEO.Base
             foreach (var item in _text) 
             {
                 var yin = PingToYin(item.ToString());
-                if (yin != null)
-                    return "";
+                if (yin == null)
+                {
+                    full += item.ToString();
+                    continue;
+                }
+                    
+                full += yin.luoma;
             }
             return full;
         }

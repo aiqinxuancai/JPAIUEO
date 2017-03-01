@@ -13,10 +13,12 @@ namespace JPAIUEO.Base
 
     class Doc
     {
+        public string fullString { get; set; }
         public string ping { get; set; }
-        public string pian { get; set; }
         public string luoma { get; set; }
-        public string baseLine { get; set; }
+        public string jp { get; set; }
+        public string cn { get; set; }
+        public string baseText { get; set; }
     }
 
     class DocData
@@ -25,21 +27,29 @@ namespace JPAIUEO.Base
 
         public static void InitData()
         {
-            var zz = @"●(.*)\s*（(.*)）[0①②③○\s]*(.*)";
+            var zz = @"●(.*)\s*（(.*)）[①②③0○\s]*(.*)\r\n";
             Regex reg = new Regex(zz);
             var match = reg.Matches(Properties.Resources.danci2);
             foreach(Match line in match)
             {
                 var groups = line.Groups;
-                if (groups.Count == 3)
+                if (groups.Count == 4)
                 {
-
-
-
-                    foreach (Group data in groups)
+                    Doc y = new Doc
                     {
-                        Debug.WriteLine(data.Value);
-                    }
+                        baseText = groups[0].ToString(),
+                        fullString = groups[1].ToString().Trim(" ".ToArray()) + " - " + groups[2].ToString() + "(" + YinData.PingToYinText(groups[2].ToString()) + ") - " + groups[3].ToString().Trim(" ".ToArray()),
+                        ping = groups[2].ToString().Trim(" ".ToArray()),
+                        luoma = YinData.PingToYinText(groups[2].ToString()).Trim(" ".ToArray()),
+                        jp = groups[1].ToString().Trim(" ".ToArray()),
+                        cn = groups[3].ToString().Trim(" ".ToArray())
+                    };
+                    docList.Add(y);
+
+                    //foreach (Group data in groups)
+                    //{
+                    //    Debug.WriteLine(data.Value);
+                    //}
                 }
             }
         }
