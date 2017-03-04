@@ -14,6 +14,9 @@ namespace JPAIUEO.Base
     class Doc
     {
         public string fullString { get; set; }
+        /// <summary>
+        /// 平假名
+        /// </summary>
         public string ping { get; set; }
         public string luoma { get; set; }
         public string jp { get; set; }
@@ -55,6 +58,15 @@ namespace JPAIUEO.Base
         }
 
 
-
+        public static Doc GetYinDoc(Yin yin)
+        {
+            var newList = docList.ToArray().Where(e => ((Doc)e).ping.Contains(yin.ping)).ToList();
+            Random a = new Random();
+            var id = a.Next(0, newList.Count - 1);
+            var ret = (Doc)newList[id];
+            if (ret == null)
+                return new Doc();
+            return ret;
+        }
     }
 }

@@ -24,19 +24,23 @@ namespace JPAIUEO
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
+        static Yin m_yin = new Yin();
+
         public MainWindow()
         {
             InitializeComponent();
             AllowsTransparency = true;
             this.btnMenuMain.ContextMenu = null;
-            var t = new DispatcherTimer(TimeSpan.FromSeconds(5), DispatcherPriority.Normal, Tick, this.Dispatcher);
-            
+            RandomData();
+
+            //var t = new DispatcherTimer(TimeSpan.FromSeconds(5), DispatcherPriority.Normal, Tick, this.Dispatcher);
+            //transitioning.Content = new TextBlock { Text = "", SnapsToDevicePixels = true, TextAlignment = TextAlignment.Center };
         }
 
         void Tick(object sender, EventArgs e)
         {
-            var dateTime = DateTime.Now;
-            transitioning.Content = new TextBlock { Text = "Transitioning Content! " + dateTime, SnapsToDevicePixels = true , TextAlignment = TextAlignment.Center};
+            //var dateTime = DateTime.Now;
+            //transitioning.Content = new TextBlock { Text = "Transitioning Content! " + dateTime, SnapsToDevicePixels = true , TextAlignment = TextAlignment.Center};
         }
 
 
@@ -81,16 +85,35 @@ namespace JPAIUEO
             this.Close();
         }
 
+        void RandomData()
+        {
+            MainWindow.m_yin = YinData.GetYinRandom();
+            textBlockMain.Text = m_yin.ping;
+            textBlockMainPianJia.Text = m_yin.pian;
+            textBlockMainLuoMa.Text = m_yin.luoma;
+            textBlockMainLuoMa.Foreground = new SolidColorBrush(Color.FromArgb(0, 255, 255, 255));
+        }
 
-
+        /// <summary>
+        /// 切换当前的音
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBlockMain_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            var data = YinData.GetYinRandom();
+            RandomData();
+            textBlockTransitioning.Text = "";
+        }
 
-            textBlockMain.Text = data.ping;
-            textBlockMainPianJia.Text = data.pian;
-            textBlockMainLuoMa.Text = data.luoma;
-            textBlockMainLuoMa.Foreground = new SolidColorBrush(Color.FromArgb(0, 255, 255, 255));
+        /// <summary>
+        /// 得到一个含有当前
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBlockMainLuoMa_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var doc = DocData.GetYinDoc(m_yin);
+            textBlockTransitioning.Text = doc.fullString;
         }
     }
 }
