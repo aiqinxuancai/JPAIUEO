@@ -28,6 +28,9 @@ namespace JPAIUEO.Base
     {
         static ArrayList docList = new ArrayList();
 
+        /// <summary>
+        /// 把网上翻来的简单单次用正则表达式提取
+        /// </summary>
         public static void InitData()
         {
             var zz = @"●(.*)\s*（(.*)）[①②③0○\s]*(.*)\r\n";
@@ -57,7 +60,11 @@ namespace JPAIUEO.Base
             }
         }
 
-
+        /// <summary>
+        /// 获取一个音的随机单词
+        /// </summary>
+        /// <param name="yin"></param>
+        /// <returns></returns>
         public static Doc GetYinDoc(Yin yin)
         {
             var newList = docList.ToArray().Where(e => ((Doc)e).ping.Contains(yin.ping)).ToList();
