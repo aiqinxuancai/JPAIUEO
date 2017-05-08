@@ -19,15 +19,23 @@
                 <TextBlock x:Name="textBlockMainPianJia" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ア" VerticalAlignment="Top" Height="40" Width="40" TextAlignment="Center" FontSize="30" MouseMove="textBlockMain_MouseMove" Foreground="#FF363636"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="3,0,0,0" >
-                <Border BorderThickness="1" BorderBrush="#FF7FC3FB" CornerRadius="3,3,3,3">
-                    <TextBlock x:Name="textBlockMainLuoMa" HorizontalAlignment="Left" TextWrapping="Wrap" Text="a" VerticalAlignment="Top" Height="35" TextAlignment="Center" FontSize="24" MouseMove="textBlockMain_MouseMove" TextDecorations="{x:Null}" Foreground="#00363636" MinWidth="40" MouseEnter="textBlockMainLuoMa_MouseEnter" MouseLeave="textBlockMainLuoMa_MouseLeave" MouseLeftButtonDown="textBlockMainLuoMa_MouseLeftButtonDown"/>
-                </Border>
+
+                <Grid>
+                    <Border BorderThickness="1" BorderBrush="#007FC3FB" CornerRadius="3,3,3,3" Background="#B27FC3FB">
+                        <TextBlock x:Name="textBlockMainLuoMa" HorizontalAlignment="Left" TextWrapping="Wrap" Text="a" VerticalAlignment="Top" Height="35" TextAlignment="Center" FontSize="24" MouseMove="textBlockMain_MouseMove" TextDecorations="{x:Null}" Foreground="#00363636" MinWidth="40" MouseEnter="textBlockMainLuoMa_MouseEnter" MouseLeave="textBlockMainLuoMa_MouseLeave" MouseLeftButtonDown="textBlockMainLuoMa_MouseLeftButtonDown"/>
+                    </Border>
+                    <Grid x:Name="buttonHand" MinWidth="40">
+                        <iconPacks:PackIconModern Kind="CursorHand" Width="Auto" Height="20" Foreground="#CCFFFFFF" Margin="10,7,12,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
+                    </Grid>
+                </Grid>
+
+
             </StackPanel>
 
         </WrapPanel>
         <WrapPanel Margin="0,73,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <Controls:TransitioningContentControl x:Name="transitioning"
-                                                  Transition="Left" Height="32" RenderTransformOrigin="0.5,0.5" Width="176" >
+                                                  Transition="Left" Height="32" RenderTransformOrigin="0.5,0.5" Width="176" Foreground="#FF373737" >
                 <Controls:TransitioningContentControl.Content>
                     <TextBlock x:Name="textBlockTransitioning" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center"  TextAlignment="Center" />
                 </Controls:TransitioningContentControl.Content>
@@ -49,6 +57,6 @@
                 </Button.ContextMenu>
             </Button>
         </StackPanel>
-        
+
     </Grid>
 </Controls:MetroWindow>

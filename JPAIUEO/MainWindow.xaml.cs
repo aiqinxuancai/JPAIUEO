@@ -67,12 +67,14 @@ namespace JPAIUEO
 
         private void textBlockMainLuoMa_MouseEnter(object sender, MouseEventArgs e)
         {
-            textBlockMainLuoMa.Foreground = new SolidColorBrush(Color.FromRgb(54, 54, 54));
+            buttonHand.Visibility = Visibility.Hidden;
+            textBlockMainLuoMa.Foreground = new SolidColorBrush(Color.FromArgb(240, 255, 255, 255));
         }
 
         private void textBlockMainLuoMa_MouseLeave(object sender, MouseEventArgs e)
         {
             //把文字设置成透明
+            buttonHand.Visibility = Visibility.Visible;
             textBlockMainLuoMa.Foreground = new SolidColorBrush(Color.FromArgb(0, 255, 255, 255));
         }
 
