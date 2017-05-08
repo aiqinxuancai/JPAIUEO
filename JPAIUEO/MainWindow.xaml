@@ -19,7 +19,7 @@
                 <TextBlock x:Name="textBlockMainPianJia" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ア" VerticalAlignment="Top" Height="40" Width="40" TextAlignment="Center" FontSize="30" MouseMove="textBlockMain_MouseMove" Foreground="#FF363636"/>
             </StackPanel>
             <StackPanel VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="3,0,0,0" >
-                <Border BorderThickness="1" BorderBrush="#FF7FC3FB">
+                <Border BorderThickness="1" BorderBrush="#FF7FC3FB" CornerRadius="3,3,3,3">
                     <TextBlock x:Name="textBlockMainLuoMa" HorizontalAlignment="Left" TextWrapping="Wrap" Text="a" VerticalAlignment="Top" Height="35" TextAlignment="Center" FontSize="24" MouseMove="textBlockMain_MouseMove" TextDecorations="{x:Null}" Foreground="#00363636" MinWidth="40" MouseEnter="textBlockMainLuoMa_MouseEnter" MouseLeave="textBlockMainLuoMa_MouseLeave" MouseLeftButtonDown="textBlockMainLuoMa_MouseLeftButtonDown"/>
                 </Border>
             </StackPanel>

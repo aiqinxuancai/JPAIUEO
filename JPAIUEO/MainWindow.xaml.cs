@@ -72,6 +72,7 @@ namespace JPAIUEO
 
         private void textBlockMainLuoMa_MouseLeave(object sender, MouseEventArgs e)
         {
+            //把文字设置成透明
             textBlockMainLuoMa.Foreground = new SolidColorBrush(Color.FromArgb(0, 255, 255, 255));
         }
 
