@@ -12,7 +12,7 @@
         Title="MainWindow" Height="105" Width="180" Background="#00FFFFFF"  AllowsTransparency="True" WindowStyle="None" ShowInTaskbar="False" Topmost="True" ShowMinButton="False" ShowMaxRestoreButton="False" ShowCloseButton="False" ShowTitleBar="False" UseNoneWindowStyle="True" OverlayBrush="Black" NonActiveBorderBrush="#00808080" ResizeMode="NoResize" SaveWindowPosition="True" >
 
     <Grid >
-        <Border BorderThickness="1" BorderBrush="#4C000000" Background="#7FFFFFFF" CornerRadius="6,6,6,6"  />
+        <Border BorderThickness="1" BorderBrush="#4C000000" Background="#7FFFFFFF" CornerRadius="6,6,6,6" MouseLeftButtonDown="textBlockMain_MouseMove"  />
         <WrapPanel Margin="0,0,0,32" HorizontalAlignment="Center">
             <TextBlock x:Name="textBlockMain" HorizontalAlignment="Left" TextWrapping="Wrap" Text="あ" VerticalAlignment="Top" Height="70" Width="60" TextAlignment="Center" FontSize="60" MouseMove="textBlockMain_MouseMove" Foreground="#FF363636" MouseLeftButtonDown="textBlockMain_MouseLeftButtonDown"/>
             <StackPanel Width="40" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Margin="3,0,0,0"  >
