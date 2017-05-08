@@ -9,10 +9,11 @@
         xmlns:local="clr-namespace:JPAIUEO"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="MainWindow" Height="105" Width="180" Background="#7FFFFFFF"  AllowsTransparency="True" WindowStyle="None" ShowInTaskbar="False" Topmost="True" ShowMinButton="False" ShowMaxRestoreButton="False" ShowCloseButton="False" ShowTitleBar="False" UseNoneWindowStyle="True" OverlayBrush="Black" NonActiveBorderBrush="#00808080" ResizeMode="NoResize" SaveWindowPosition="True" >
+        Title="MainWindow" Height="105" Width="180" Background="#00FFFFFF"  AllowsTransparency="True" WindowStyle="None" ShowInTaskbar="False" Topmost="True" ShowMinButton="False" ShowMaxRestoreButton="False" ShowCloseButton="False" ShowTitleBar="False" UseNoneWindowStyle="True" OverlayBrush="Black" NonActiveBorderBrush="#00808080" ResizeMode="NoResize" SaveWindowPosition="True" >
 
     <Grid >
-        <WrapPanel Margin="0,0,0,32">
+        <Border BorderThickness="1" BorderBrush="#4C000000" Background="#7FFFFFFF" CornerRadius="6,6,6,6"  />
+        <WrapPanel Margin="0,0,0,32" HorizontalAlignment="Center">
             <TextBlock x:Name="textBlockMain" HorizontalAlignment="Left" TextWrapping="Wrap" Text="あ" VerticalAlignment="Top" Height="70" Width="60" TextAlignment="Center" FontSize="60" MouseMove="textBlockMain_MouseMove" Foreground="#FF363636" MouseLeftButtonDown="textBlockMain_MouseLeftButtonDown"/>
             <StackPanel Width="40" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Margin="3,0,0,0"  >
                 <TextBlock x:Name="textBlockMainPianJia" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ア" VerticalAlignment="Top" Height="40" Width="40" TextAlignment="Center" FontSize="30" MouseMove="textBlockMain_MouseMove" Foreground="#FF363636"/>
@@ -42,7 +43,7 @@
             </StackPanel.Resources>
             <Button x:Name="btnMenuMain" Content="{iconPacks:PackIconMaterial MenuDown, Width=12, Height=12}" Background="Transparent" Margin="145,0,0,0" Foreground="#FF363636" Click="btnMenuMain_Click" >
                 <Button.ContextMenu>
-                    <ContextMenu x:Name="menuMain">
+                    <ContextMenu x:Name="menuMain" >
                         <MenuItem x:Name="menuMainClose" Header="Exit" Click="menuMainClose_Click"/>
                     </ContextMenu>
                 </Button.ContextMenu>
