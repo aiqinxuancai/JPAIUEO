@@ -119,7 +119,17 @@ namespace JPAIUEO
 
             await Task.Run(() =>
             {
-                Thread.Sleep(1000);
+   
+                for (int i= 0; i < 100; i++)
+                {
+                    Thread.Sleep(10);
+                    if (this.isButtonPingDown == false)
+                    {
+                        return;
+                    }
+                    
+                }
+
                 this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate ()
                 {
                     if (this.isButtonPingDown == true)
@@ -167,7 +177,15 @@ namespace JPAIUEO
 
             await Task.Run(() =>
             {
-                Thread.Sleep(1000);
+                for (int i = 0; i < 100; i++)
+                {
+                    Thread.Sleep(10);
+                    if (this.isButtonPianDown == false)
+                    {
+                        return;
+                    }
+
+                }
                 this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate ()
                 {
                     if (this.isButtonPianDown == true)
