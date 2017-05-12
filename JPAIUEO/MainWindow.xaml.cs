@@ -16,6 +16,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using JPAIUEO.Base;
+using System.Threading;
+using System.Diagnostics;
 
 namespace JPAIUEO
 {
@@ -26,9 +28,16 @@ namespace JPAIUEO
     {
         static Yin m_yin = new Yin();
 
+        bool isButtonPingDown = false;
+        bool isButtonPianDown = false;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            this.borderPing.Visibility = Visibility.Hidden;
+            this.borderPian.Visibility = Visibility.Hidden;
+
             AllowsTransparency = true;
             this.btnMenuMain.ContextMenu = null;
             RandomData();
@@ -102,12 +111,33 @@ namespace JPAIUEO
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void textBlockMain_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private async void textBlockMain_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            this.isButtonPingDown = true;
             RandomData();
             textBlockTransitioning.Text = "";
+
+            await Task.Run(() =>
+            {
+                Thread.Sleep(1000);
+                this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate ()
+                {
+                    if (this.isButtonPingDown == true)
+                    {
+                        //按下中，将平假名遮挡
+                        borderPing.Visibility = Visibility.Visible;
+                        this.isButtonPingDown = false;
+                    }
+                });
+            });
         }
 
+
+
+        private void textBlockMain_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            this.isButtonPingDown = false;
+        }
         /// <summary>
         /// 得到一个含有当前
         /// </summary>
@@ -117,6 +147,42 @@ namespace JPAIUEO
         {
             var doc = DocData.GetYinDoc(m_yin);
             textBlockTransitioning.Text = doc.fullString;
+        }
+
+        private void borderPing_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            borderPing.Visibility = Visibility.Hidden;
+        }
+
+        private void borderPian_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            borderPian.Visibility = Visibility.Hidden;
+        }
+
+        private async void textBlockMainPianJia_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.isButtonPianDown = true;
+            RandomData();
+            textBlockTransitioning.Text = "";
+
+            await Task.Run(() =>
+            {
+                Thread.Sleep(1000);
+                this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate ()
+                {
+                    if (this.isButtonPianDown == true)
+                    {
+                        //按下中，将平假名遮挡
+                        borderPian.Visibility = Visibility.Visible;
+                        this.isButtonPianDown = false;
+                    }
+                });
+            });
+        }
+
+        private void textBlockMainPianJia_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            this.isButtonPianDown = false;
         }
     }
 }

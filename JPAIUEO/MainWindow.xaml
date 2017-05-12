@@ -14,23 +14,24 @@
     <Grid >
         <Border BorderThickness="1" BorderBrush="#4C000000" Background="#7FFFFFFF" CornerRadius="6,6,6,6" MouseLeftButtonDown="textBlockMain_MouseMove"  />
         <WrapPanel Margin="0,0,0,32" HorizontalAlignment="Center">
-            <TextBlock x:Name="textBlockMain" HorizontalAlignment="Left" TextWrapping="Wrap" Text="あ" VerticalAlignment="Top" Height="70" Width="60" TextAlignment="Center" FontSize="60" MouseMove="textBlockMain_MouseMove" Foreground="#FF363636" MouseLeftButtonDown="textBlockMain_MouseLeftButtonDown"/>
-            <StackPanel Width="40" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Margin="3,0,0,0"  >
-                <TextBlock x:Name="textBlockMainPianJia" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ア" VerticalAlignment="Top" Height="40" Width="40" TextAlignment="Center" FontSize="30" MouseMove="textBlockMain_MouseMove" Foreground="#FF363636"/>
-            </StackPanel>
-            <StackPanel VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="3,0,0,0" >
+            <Grid>
+                <TextBlock x:Name="textBlockMain" HorizontalAlignment="Left" TextWrapping="Wrap" Text="あ" VerticalAlignment="Top" Height="70" Width="60" TextAlignment="Center" FontSize="60" MouseMove="textBlockMain_MouseMove" Foreground="#FF363636" MouseLeftButtonDown="textBlockMain_MouseLeftButtonDown" MouseLeftButtonUp="textBlockMain_MouseLeftButtonUp"/>
+                <Border x:Name="borderPing" BorderThickness="1" BorderBrush="#007FC3FB" CornerRadius="3,3,3,3" Background="#FF7FC3FB" Margin="0,10,0,0" MouseLeftButtonDown="borderPing_MouseLeftButtonDown"></Border>
 
-                <Grid>
-                    <Border BorderThickness="1" BorderBrush="#007FC3FB" CornerRadius="3,3,3,3" Background="#B27FC3FB">
-                        <TextBlock x:Name="textBlockMainLuoMa" HorizontalAlignment="Left" TextWrapping="Wrap" Text="a" VerticalAlignment="Top" Height="35" TextAlignment="Center" FontSize="24" MouseMove="textBlockMain_MouseMove" TextDecorations="{x:Null}" Foreground="#00363636" MinWidth="40" MouseEnter="textBlockMainLuoMa_MouseEnter" MouseLeave="textBlockMainLuoMa_MouseLeave" MouseLeftButtonDown="textBlockMainLuoMa_MouseLeftButtonDown"/>
-                    </Border>
-                    <Grid x:Name="buttonHand" MinWidth="40">
-                        <iconPacks:PackIconModern Kind="CursorHand" Width="Auto" Height="20" Foreground="#CCFFFFFF" Margin="10,7,12,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
-                    </Grid>
+            </Grid>
+            <Grid>
+                <TextBlock x:Name="textBlockMainPianJia" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ア" VerticalAlignment="Top" Height="43" Width="40" TextAlignment="Center" FontSize="30" MouseMove="textBlockMain_MouseMove" Foreground="#FF363636" Margin="0,30,0,0" MouseLeftButtonDown="textBlockMainPianJia_MouseLeftButtonDown" MouseLeftButtonUp="textBlockMainPianJia_MouseLeftButtonUp"/>
+                <Border x:Name="borderPian" BorderThickness="1" BorderBrush="#007FC3FB" CornerRadius="3,3,3,3" Background="#FF7FC3FB" Margin="0,30,0,0" MouseLeftButtonDown="borderPian_MouseLeftButtonDown"></Border>
+            </Grid>
+            <Grid>
+                <Border BorderThickness="1" BorderBrush="#007FC3FB" CornerRadius="3,3,3,3" Background="#B27FC3FB" Margin="0,30,0,0">
+                    <TextBlock x:Name="textBlockMainLuoMa" HorizontalAlignment="Left" TextWrapping="Wrap" Text="a" TextAlignment="Center" FontSize="24" MouseMove="textBlockMain_MouseMove" TextDecorations="{x:Null}" Foreground="#00363636" MinWidth="40" MouseEnter="textBlockMainLuoMa_MouseEnter" MouseLeave="textBlockMainLuoMa_MouseLeave" MouseLeftButtonDown="textBlockMainLuoMa_MouseLeftButtonDown" Margin="0,4,0,-1"/>
+                </Border>
+                <Grid x:Name="buttonHand" MinWidth="40" Margin="0,30,0,0">
+                    <iconPacks:PackIconModern Kind="CursorHand" Width="Auto" Height="Auto" Foreground="#CCFFFFFF" Margin="10,10,12,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                 </Grid>
+            </Grid>
 
-
-            </StackPanel>
 
         </WrapPanel>
         <WrapPanel Margin="0,73,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" >
