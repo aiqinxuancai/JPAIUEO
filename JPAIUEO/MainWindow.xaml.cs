@@ -114,8 +114,6 @@ namespace JPAIUEO
         private async void textBlockMain_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.isButtonPingDown = true;
-            RandomData();
-            textBlockTransitioning.Text = "";
 
             await Task.Run(() =>
             {
@@ -147,6 +145,9 @@ namespace JPAIUEO
         private void textBlockMain_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             this.isButtonPingDown = false;
+            RandomData();
+            textBlockTransitioning.Text = "";
+
         }
         /// <summary>
         /// 得到一个含有当前
@@ -172,8 +173,7 @@ namespace JPAIUEO
         private async void textBlockMainPianJia_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.isButtonPianDown = true;
-            RandomData();
-            textBlockTransitioning.Text = "";
+
 
             await Task.Run(() =>
             {
@@ -201,6 +201,8 @@ namespace JPAIUEO
         private void textBlockMainPianJia_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             this.isButtonPianDown = false;
+            RandomData();
+            textBlockTransitioning.Text = "";
         }
     }
 }
