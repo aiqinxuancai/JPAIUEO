@@ -42,6 +42,8 @@ namespace JPAIUEO
             this.btnMenuMain.ContextMenu = null;
             RandomData();
 
+
+            WindowAnswerYin.Load(null);
             //var t = new DispatcherTimer(TimeSpan.FromSeconds(5), DispatcherPriority.Normal, Tick, this.Dispatcher);
             //transitioning.Content = new TextBlock { Text = "", SnapsToDevicePixels = true, TextAlignment = TextAlignment.Center };
         }
