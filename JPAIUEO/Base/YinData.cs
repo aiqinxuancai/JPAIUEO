@@ -13,9 +13,21 @@ namespace JPAIUEO.Base
 {
     class Yin
     {
+        /// <summary>
+        /// 平假名
+        /// </summary>
         public string ping { get; set; }
+        /// <summary>
+        /// 片假名
+        /// </summary>
         public string pian { get; set; }
-        public string luoma { get; set; }
+        /// <summary>
+        /// 罗马音读音
+        /// </summary>
+        public string pronunciation { get; set; }
+        /// <summary>
+        /// 元音
+        /// </summary>
         public string baseLine { get; set; }
     }
 
@@ -34,7 +46,7 @@ namespace JPAIUEO.Base
                 {
                     Yin y = new Yin { ping = yin["ping"].ToString(),
                         pian = yin["pian"].ToString(),
-                        luoma = yin["luoma"].ToString(),
+                        pronunciation = yin["pronunciation"].ToString(),
                         baseLine = item.Key
                     };
                     listYin.Add(y);
@@ -47,7 +59,7 @@ namespace JPAIUEO.Base
 
         public static Yin GetYin(string _luoma)
         {
-            var yin = (Yin)listYin.ToArray().First(e => ((Yin)e).luoma == _luoma);
+            var yin = (Yin)listYin.ToArray().First(e => ((Yin)e).pronunciation == _luoma);
             return yin;
         }
 
@@ -81,7 +93,7 @@ namespace JPAIUEO.Base
                     continue;
                 }
                     
-                full += yin.luoma;
+                full += yin.pronunciation;
             }
             return full;
         }

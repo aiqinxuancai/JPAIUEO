@@ -104,7 +104,7 @@ namespace JPAIUEO
             MainWindow.m_yin = YinData.GetYinRandom();
             textBlockMain.Text = m_yin.ping;
             textBlockMainPianJia.Text = m_yin.pian;
-            textBlockMainLuoMa.Text = m_yin.luoma;
+            textBlockMainLuoMa.Text = m_yin.pronunciation;
             textBlockMainLuoMa.Foreground = new SolidColorBrush(Color.FromArgb(0, 255, 255, 255));
         }
 

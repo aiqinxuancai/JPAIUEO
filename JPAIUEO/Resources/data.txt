@@ -3,252 +3,252 @@
         {
             "ping": "あ",
             "pian": "ア",
-            "luoma": "a"
+            "pronunciation": "a"
         },
         {
             "ping": "い",
             "pian": "イ",
-            "luoma": "i"
+            "pronunciation": "i"
         },
         {
             "ping": "う",
             "pian": "ウ",
-            "luoma": "u"
+            "pronunciation": "u"
         },
         {
             "ping": "え",
             "pian": "エ",
-            "luoma": "e"
+            "pronunciation": "e"
         },
         {
             "ping": "お",
             "pian": "オ",
-            "luoma": "o"
+            "pronunciation": "o"
         }
     ],
     "ka": [
         {
             "ping": "か",
             "pian": "カ",
-            "luoma": "ka"
+            "pronunciation": "ka"
         },
         {
             "ping": "き",
             "pian": "キ",
-            "luoma": "ki"
+            "pronunciation": "ki"
         },
         {
             "ping": "く",
             "pian": "ク",
-            "luoma": "ku"
+            "pronunciation": "ku"
         },
         {
             "ping": "け",
             "pian": "ケ",
-            "luoma": "ke"
+            "pronunciation": "ke"
         },
         {
             "ping": "こ",
             "pian": "コ",
-            "luoma": "ko"
+            "pronunciation": "ko"
         }
     ],
     "sa": [
         {
             "ping": "さ",
             "pian": "サ",
-            "luoma": "sa"
+            "pronunciation": "sa"
         },
         {
             "ping": "し",
             "pian": "シ",
-            "luoma": "shi"
+            "pronunciation": "shi"
         },
         {
             "ping": "す",
             "pian": "ス",
-            "luoma": "su"
+            "pronunciation": "su"
         },
         {
             "ping": "せ",
             "pian": "セ",
-            "luoma": "se"
+            "pronunciation": "se"
         },
         {
             "ping": "そ",
             "pian": "ソ",
-            "luoma": "so"
+            "pronunciation": "so"
         }
     ],
     "ta": [
         {
             "ping": "た",
             "pian": "タ",
-            "luoma": "ta"
+            "pronunciation": "ta"
         },
         {
             "ping": "ち",
             "pian": "チ",
-            "luoma": "chi"
+            "pronunciation": "chi"
         },
         {
             "ping": "つ",
             "pian": "ツ",
-            "luoma": "tsu"
+            "pronunciation": "tsu"
         },
         {
             "ping": "て",
             "pian": "テ",
-            "luoma": "te"
+            "pronunciation": "te"
         },
         {
             "ping": "と",
             "pian": "ト",
-            "luoma": "to"
+            "pronunciation": "to"
         }
     ],
     "na": [
         {
             "ping": "な",
             "pian": "ナ",
-            "luoma": "na"
+            "pronunciation": "na"
         },
         {
             "ping": "に",
             "pian": "ニ",
-            "luoma": "ni"
+            "pronunciation": "ni"
         },
         {
             "ping": "ぬ",
             "pian": "ヌ",
-            "luoma": "nu"
+            "pronunciation": "nu"
         },
         {
             "ping": "ね",
             "pian": "ネ",
-            "luoma": "ne"
+            "pronunciation": "ne"
         },
         {
             "ping": "の",
             "pian": "ノ",
-            "luoma": "no"
+            "pronunciation": "no"
         }
     ],
     "ha": [
         {
             "ping": "は",
             "pian": "ハ",
-            "luoma": "ha"
+            "pronunciation": "ha"
         },
         {
             "ping": "ひ",
             "pian": "ヒ",
-            "luoma": "hi"
+            "pronunciation": "hi"
         },
         {
             "ping": "ふ",
             "pian": "フ",
-            "luoma": "fu"
+            "pronunciation": "fu"
         },
         {
             "ping": "へ",
             "pian": "ヘ",
-            "luoma": "he"
+            "pronunciation": "he"
         },
         {
             "ping": "ほ",
             "pian": "ホ",
-            "luoma": "ho"
+            "pronunciation": "ho"
         }
     ],
     "ma": [
         {
             "ping": "ま",
             "pian": "マ",
-            "luoma": "ma"
+            "pronunciation": "ma"
         },
         {
             "ping": "み",
             "pian": "ミ",
-            "luoma": "mi"
+            "pronunciation": "mi"
         },
         {
             "ping": "む",
             "pian": "ム",
-            "luoma": "mu"
+            "pronunciation": "mu"
         },
         {
             "ping": "め",
             "pian": "メ",
-            "luoma": "me"
+            "pronunciation": "me"
         },
         {
             "ping": "も",
             "pian": "モ",
-            "luoma": "mo"
+            "pronunciation": "mo"
         }
     ],
     "ya": [
         {
             "ping": "や",
             "pian": "ヤ",
-            "luoma": "ya"
+            "pronunciation": "ya"
         },
         {
             "ping": "ゆ",
             "pian": "ユ",
-            "luoma": "yu"
+            "pronunciation": "yu"
         },
         {
             "ping": "よ",
             "pian": "ヨ",
-            "luoma": "yo"
+            "pronunciation": "yo"
         }
     ],
     "ra": [
         {
             "ping": "ら",
             "pian": "ラ",
-            "luoma": "ra"
+            "pronunciation": "ra"
         },
         {
             "ping": "り",
             "pian": "リ",
-            "luoma": "ri"
+            "pronunciation": "ri"
         },
         {
             "ping": "る",
             "pian": "ル",
-            "luoma": "ru"
+            "pronunciation": "ru"
         },
         {
             "ping": "れ",
             "pian": "レ",
-            "luoma": "re"
+            "pronunciation": "re"
         },
         {
             "ping": "ろ",
             "pian": "ロ",
-            "luoma": "ro"
+            "pronunciation": "ro"
         }
     ],
     "wa": [
         {
             "ping": "わ",
             "pian": "ワ",
-            "luoma": "wa"
+            "pronunciation": "wa"
         },
         {
             "ping": "を",
             "pian": "ヲ",
-            "luoma": "wo"
+            "pronunciation": "wo"
         }
     ],
     "n": [
         {
             "ping": "ん",
             "pian": "ン",
-            "luoma": "n"
+            "pronunciation": "n"
         }
     ]
 }
