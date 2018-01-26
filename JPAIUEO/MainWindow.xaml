@@ -53,13 +53,18 @@
                 </ResourceDictionary>
             </StackPanel.Resources>
             <Button x:Name="btnMenuMain" Content="{iconPacks:PackIconMaterial MenuDown, Width=12, Height=12}" Background="Transparent" Margin="145,0,0,0" Foreground="#FF363636" Click="btnMenuMain_Click" >
-                <Button.ContextMenu>
-                    <ContextMenu x:Name="menuMain" >
-                        <MenuItem x:Name="menuMainClose" Header="Exit" Click="menuMainClose_Click"/>
-                    </ContextMenu>
-                </Button.ContextMenu>
+
             </Button>
         </StackPanel>
 
+        
+        
     </Grid>
+
+    <Controls:MetroWindow.ContextMenu>
+        <ContextMenu x:Name="menuMain" >
+            <!--<MenuItem x:Name="menuMainClose" Header="Exit" Click="menuMainClose_Click"/>-->
+            
+        </ContextMenu>
+    </Controls:MetroWindow.ContextMenu>
 </Controls:MetroWindow>

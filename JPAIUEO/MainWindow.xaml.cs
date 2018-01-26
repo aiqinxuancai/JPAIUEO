@@ -21,6 +21,22 @@ using System.Diagnostics;
 
 namespace JPAIUEO
 {
+    public class MenuItem
+    {
+        public string Text { get; set; }
+        public string Header { get; set; }
+        public List<MenuItem> Children { get; private set; }
+        public ICommand Command { get; set; }
+
+        public MenuItem(string item)
+        {
+            Text = item;
+            Header = item;
+            Children = new List<MenuItem>();
+        }
+    }
+
+
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
@@ -45,7 +61,8 @@ namespace JPAIUEO
             this.btnMenuMain.ContextMenu = null;
             RandomData();
 
-            
+            //MenuItem t = new MenuItem("666");
+            //menuMain.ItemsSource = new MenuItem[] { t };
 
             WindowAnswerYin.Load(null); //音的提问环节
             //var t = new DispatcherTimer(TimeSpan.FromSeconds(5), DispatcherPriority.Normal, Tick, this.Dispatcher);
@@ -76,7 +93,11 @@ namespace JPAIUEO
             }
             else if (e.Button == System.Windows.Forms.MouseButtons.Right)
             {
-
+                //this.menuMain.PlacementTarget = this.btnMenuMain;
+                
+                this.menuMain.Placement = PlacementMode.MousePoint;
+                this.menuMain.IsOpen = true;
+                this.menuMain.StaysOpen = true;
             }
         }
 
