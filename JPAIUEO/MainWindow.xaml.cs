@@ -26,6 +26,8 @@ namespace JPAIUEO
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
+        private System.Windows.Forms.NotifyIcon m_notifyicon = null;
+
         static Yin m_yin = new Yin();
 
         bool isButtonPingDown = false;
@@ -34,6 +36,7 @@ namespace JPAIUEO
         public MainWindow()
         {
             InitializeComponent();
+            LoadNotifyIcon();
 
             this.borderPing.Visibility = Visibility.Hidden;
             this.borderPian.Visibility = Visibility.Hidden;
@@ -42,18 +45,40 @@ namespace JPAIUEO
             this.btnMenuMain.ContextMenu = null;
             RandomData();
 
+            
 
-            WindowAnswerYin.Load(null);
+            WindowAnswerYin.Load(null); //音的提问环节
             //var t = new DispatcherTimer(TimeSpan.FromSeconds(5), DispatcherPriority.Normal, Tick, this.Dispatcher);
             //transitioning.Content = new TextBlock { Text = "", SnapsToDevicePixels = true, TextAlignment = TextAlignment.Center };
         }
 
-        void Tick(object sender, EventArgs e)
+        private void Tick(object sender, EventArgs e)
         {
             //var dateTime = DateTime.Now;
             //transitioning.Content = new TextBlock { Text = "Transitioning Content! " + dateTime, SnapsToDevicePixels = true , TextAlignment = TextAlignment.Center};
         }
 
+
+        private void LoadNotifyIcon()
+        {
+            m_notifyicon = new System.Windows.Forms.NotifyIcon();
+            m_notifyicon.Text = "JPAIUEO";
+            m_notifyicon.Icon = System.Drawing.Icon.ExtractAssociatedIcon(Process.GetCurrentProcess().MainModule.FileName);//winMain.Icon;//new System.Drawing.Icon("Icon1.ico");
+            m_notifyicon.Visible = true;
+            m_notifyicon.MouseClick += new System.Windows.Forms.MouseEventHandler(notifyIcon_MouseClick);
+        }
+
+        private void notifyIcon_MouseClick(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+
+            }
+            else if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+
+            }
+        }
 
         private void textBlockMain_MouseMove(object sender, MouseEventArgs e)
         {
@@ -99,7 +124,7 @@ namespace JPAIUEO
             this.Close();
         }
 
-        void RandomData()
+        private void RandomData()
         {
             MainWindow.m_yin = YinData.GetYinRandom();
             textBlockMain.Text = m_yin.ping;

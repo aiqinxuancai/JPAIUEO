@@ -11,6 +11,9 @@ using Newtonsoft.Json.Linq;
 
 namespace JPAIUEO.Base
 {
+
+    enum YIN_TYPE { QING, ZHUO, BANZHUO };
+
     class Yin
     {
         /// <summary>
@@ -29,6 +32,12 @@ namespace JPAIUEO.Base
         /// 元音
         /// </summary>
         public string baseLine { get; set; }
+
+        /// <summary>
+        /// 音类型（清音 浊音 半浊音）
+        /// </summary>
+        public YIN_TYPE type { get; set; }
+        
     }
 
     
@@ -39,15 +48,21 @@ namespace JPAIUEO.Base
 
         public static void InitData()
         {
-            JObject root = JObject.Parse(Properties.Resources.data);
-            foreach (var item in root)
+            JObject root = JObject.Parse(Encoding.UTF8.GetString(Properties.Resources.data));
+
+            //载入清音
+            JObject qingRoot = (JObject)root["qing"];
+            
+            foreach (var item in qingRoot)
             {
                 foreach (JObject yin in item.Value)
                 {
-                    Yin y = new Yin { ping = yin["ping"].ToString(),
+                    Yin y = new Yin {
+                        ping = yin["ping"].ToString(),
                         pian = yin["pian"].ToString(),
                         pronunciation = yin["pronunciation"].ToString(),
-                        baseLine = item.Key
+                        baseLine = item.Key,
+                        type = YIN_TYPE.QING
                     };
                     listYin.Add(y);
                 }

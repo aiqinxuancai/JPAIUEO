@@ -19,7 +19,7 @@ namespace JPAIUEO.Properties {
     // 类通过类似于 ResGen 或 Visual Studio 的工具自动生成的。
     // 若要添加或移除成员，请编辑 .ResX 文件，然后重新运行 ResGen
     // (以 /str 作为命令选项)，或重新生成 VS 项目。
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -172,192 +172,12 @@ namespace JPAIUEO.Properties {
         }
         
         /// <summary>
-        ///   查找类似 {
-        ///    &quot;a&quot;: [
-        ///        {
-        ///            &quot;ping&quot;: &quot;あ&quot;,
-        ///            &quot;pian&quot;: &quot;ア&quot;,
-        ///            &quot;luoma&quot;: &quot;a&quot;
-        ///        },
-        ///        {
-        ///            &quot;ping&quot;: &quot;い&quot;,
-        ///            &quot;pian&quot;: &quot;イ&quot;,
-        ///            &quot;luoma&quot;: &quot;i&quot;
-        ///        },
-        ///        {
-        ///            &quot;ping&quot;: &quot;う&quot;,
-        ///            &quot;pian&quot;: &quot;ウ&quot;,
-        ///            &quot;luoma&quot;: &quot;u&quot;
-        ///        },
-        ///        {
-        ///            &quot;ping&quot;: &quot;え&quot;,
-        ///            &quot;pian&quot;: &quot;エ&quot;,
-        ///            &quot;luoma&quot;: &quot;e&quot;
-        ///        },
-        ///        {
-        ///            &quot;ping&quot;: &quot;お&quot;,
-        ///            &quot;pian&quot;: &quot;オ&quot;,
-        ///            &quot;luoma&quot;: &quot;o&quot;
-        ///     [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
-        internal static string data {
+        internal static byte[] data {
             get {
-                return ResourceManager.GetString("data", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似  的本地化字符串。
-        /// </summary>
-        internal static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 あ
-        ///ア
-        ///a
-        ///い
-        ///イ
-        ///i
-        ///う
-        ///ウ
-        ///u
-        ///え
-        ///エ
-        ///e
-        ///お
-        ///オ
-        ///o
-        ///か
-        ///カ
-        ///ka
-        ///き
-        ///キ
-        ///ki
-        ///く
-        ///ク
-        ///ku
-        ///け
-        ///ケ
-        ///ke
-        ///こ
-        ///コ
-        ///ko
-        ///さ
-        ///サ
-        ///sa
-        ///し
-        ///シ
-        ///shi
-        ///す
-        ///ス
-        ///su
-        ///せ
-        ///セ
-        ///se
-        ///そ
-        ///ソ
-        ///so
-        ///た
-        ///タ
-        ///ta
-        ///ち
-        ///チ
-        ///chi
-        ///つ
-        ///ツ
-        ///tsu
-        ///て
-        ///テ
-        ///te
-        ///と
-        ///ト
-        ///to
-        ///な
-        ///ナ
-        ///na
-        ///に
-        ///ニ
-        ///ni
-        ///ぬ
-        ///ヌ
-        ///nu
-        ///ね
-        ///ネ
-        ///ne
-        ///の
-        ///ノ
-        ///no
-        ///は
-        ///ハ
-        ///ha
-        ///ひ
-        ///ヒ
-        ///hi
-        ///ふ
-        ///フ
-        ///fu
-        ///へ
-        ///ヘ
-        ///he
-        ///ほ
-        ///ホ
-        ///ho
-        ///ま
-        ///マ
-        ///ma
-        ///み
-        ///ミ
-        ///mi
-        ///む
-        ///ム
-        ///mu
-        ///め
-        ///メ
-        ///me
-        ///も
-        ///モ
-        ///mo
-        ///や
-        ///ヤ
-        ///ya
-        ///ゆ
-        ///ユ
-        ///yu
-        ///よ
-        ///ヨ
-        ///yo
-        ///ら
-        ///ラ
-        ///ra
-        ///り
-        ///リ
-        ///ri
-        ///る
-        ///ル
-        ///ru
-        ///れ
-        ///レ
-        ///re
-        ///ろ
-        ///ロ
-        ///ro
-        ///わ
-        ///ワ
-        ///wa
-        ///を
-        ///ヲ
-        ///wo
-        ///ん
-        ///ン
-        ///n 的本地化字符串。
-        /// </summary>
-        internal static string YinText {
-            get {
-                return ResourceManager.GetString("YinText", resourceCulture);
+                object obj = ResourceManager.GetObject("data", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }
