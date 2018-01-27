@@ -18,6 +18,7 @@ using System.Windows.Threading;
 using JPAIUEO.Base;
 using System.Threading;
 using System.Diagnostics;
+using JPAIUEO.View;
 
 namespace JPAIUEO
 {
@@ -58,13 +59,13 @@ namespace JPAIUEO
             this.borderPian.Visibility = Visibility.Hidden;
 
             AllowsTransparency = true;
-            this.btnMenuMain.ContextMenu = null;
+            //this.btnMenuMain.ContextMenu = null;
             RandomData();
 
             //MenuItem t = new MenuItem("666");
             //menuMain.ItemsSource = new MenuItem[] { t };
 
-            WindowAnswerYin.Load(null); //音的提问环节
+            //WindowAnswerYin.Load(null); //音的提问环节
             //var t = new DispatcherTimer(TimeSpan.FromSeconds(5), DispatcherPriority.Normal, Tick, this.Dispatcher);
             //transitioning.Content = new TextBlock { Text = "", SnapsToDevicePixels = true, TextAlignment = TextAlignment.Center };
         }
@@ -93,11 +94,8 @@ namespace JPAIUEO
             }
             else if (e.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                //this.menuMain.PlacementTarget = this.btnMenuMain;
-                
-                this.menuMain.Placement = PlacementMode.MousePoint;
-                this.menuMain.IsOpen = true;
-                this.menuMain.StaysOpen = true;
+                WindowMainMenu.Load();
+
             }
         }
 
@@ -108,19 +106,6 @@ namespace JPAIUEO
                 this.DragMove();
             }
         }
-
-        /// <summary>
-        /// 主菜单点击打开
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnMenuMain_Click(object sender, RoutedEventArgs e)
-        {
-            this.menuMain.PlacementTarget = this.btnMenuMain;
-            this.menuMain.Placement = PlacementMode.Bottom;
-            this.menuMain.IsOpen = true;
-        }
-
 
         private void textBlockMainLuoMa_MouseEnter(object sender, MouseEventArgs e)
         {
