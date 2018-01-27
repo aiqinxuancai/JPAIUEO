@@ -80,6 +80,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Service\AppSetting.cs" />
     <Compile Include="Service\Win32.cs" />
     <Compile Include="View\WindowMainMenu.xaml.cs">
       <DependentUpon>WindowMainMenu.xaml</DependentUpon>
