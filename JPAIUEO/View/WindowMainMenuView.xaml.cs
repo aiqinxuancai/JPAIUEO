@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JPAIUEO.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,9 @@ namespace JPAIUEO.View
         {
             InitializeComponent();
 
-
+            checkBoxQing.DataContext = AppSetting.m_appSetting;
+            checkBoxZhuo.DataContext = AppSetting.m_appSetting;
+            checkBoxBanZhuo.DataContext = AppSetting.m_appSetting;
 
         }
 

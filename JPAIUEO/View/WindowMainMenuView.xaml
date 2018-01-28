@@ -12,9 +12,9 @@
                 <StackPanel >
                     <Label Content="音类型设置"></Label>
                     <StackPanel Orientation="Horizontal" Margin="5,0" >
-                        <CheckBox x:Name="checkBoxQing" Content="清音" />
-                        <CheckBox x:Name="checkBoxZhuo" Content="浊音" Margin="5,0,0,0" />
-                        <CheckBox x:Name="checkBoxBanZhuo" Content="半浊音" Margin="5,0,0,0" />
+                        <CheckBox x:Name="checkBoxQing" Content="清音" IsChecked="{Binding OpenQingYin}"  />
+                        <CheckBox x:Name="checkBoxZhuo" Content="浊音" IsChecked="{Binding OpenZhuoYin}" Margin="5,0,0,0" />
+                        <CheckBox x:Name="checkBoxBanZhuo" Content="半浊音" IsChecked="{Binding OpenBanZhuoYin}" Margin="5,0,0,0" />
                     </StackPanel>
                 </StackPanel>
 

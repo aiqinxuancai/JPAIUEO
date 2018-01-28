@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using JPAIUEO.Base;
+using JPAIUEO.Service;
 
 namespace JPAIUEO
 {
@@ -16,6 +17,7 @@ namespace JPAIUEO
     {
         public App()
         {
+            AppSetting.Load();
             YinData.InitData();
             DocData.InitData();
         }

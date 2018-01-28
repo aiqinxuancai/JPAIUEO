@@ -13,10 +13,14 @@ namespace JPAIUEO.Service
 {
     class AppSetting
     {
+        private bool _OpenQingYin;
+        private bool _OpenZhuoYin;
+        private bool _OpenBanZhuoYin;
 
-        public bool OpenQingYin { set; get; }
-        public bool OpenZhuoYin { set; get; }
-        public bool OpenBanZhuoYin { set; get; }
+
+        public bool OpenQingYin { set { _OpenQingYin = value; Save(); } get { return _OpenQingYin; } }
+        public bool OpenZhuoYin { set { _OpenZhuoYin = value; Save(); } get { return _OpenZhuoYin; } }
+        public bool OpenBanZhuoYin { set { _OpenBanZhuoYin = value; Save(); } get { return _OpenBanZhuoYin; } }
 
         public static AppSetting m_appSetting;
         public static object m_lock = new object();
