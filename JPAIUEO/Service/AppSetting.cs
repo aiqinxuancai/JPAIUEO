@@ -67,7 +67,15 @@ namespace JPAIUEO.Service
         {
             lock(m_lock)
             {
-                File.WriteAllText(@".\config.json", JsonConvert.SerializeObject(m_appSetting));
+                try
+                {
+                	File.WriteAllText(@".\config.json", JsonConvert.SerializeObject(m_appSetting));
+                }
+                catch (System.Exception ex)
+                {
+                    Debug.WriteLine(ex);
+                }
+
             }
             
         }
