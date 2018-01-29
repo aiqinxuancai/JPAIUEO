@@ -51,13 +51,24 @@ namespace JPAIUEO.Base
             JObject root = JObject.Parse(Encoding.UTF8.GetString(Properties.Resources.data));
 
             //载入清音
-            JObject qingRoot = (JObject)root["qing"];
-            
-            foreach (var item in qingRoot)
+            JObject qingRoot = (JObject)root.SelectToken("qing"); 
+            InitFromRoot(qingRoot);
+            JObject zhuoRoot = (JObject)root.SelectToken("zhuo");
+            InitFromRoot(zhuoRoot);
+        }
+
+        private static void InitFromRoot(JObject root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            foreach (var item in root)
             {
                 foreach (JObject yin in item.Value)
                 {
-                    Yin y = new Yin {
+                    Yin y = new Yin
+                    {
                         ping = yin["ping"].ToString(),
                         pian = yin["pian"].ToString(),
                         pronunciation = yin["pronunciation"].ToString(),
@@ -67,10 +78,9 @@ namespace JPAIUEO.Base
                     listYin.Add(y);
                 }
             }
-            //PingToYinText("イカくつした");
-
-
         }
+
+
 
         public static Yin GetYin(string _luoma)
         {
