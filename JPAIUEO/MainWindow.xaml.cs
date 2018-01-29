@@ -22,20 +22,6 @@ using JPAIUEO.View;
 
 namespace JPAIUEO
 {
-    public class MenuItem
-    {
-        public string Text { get; set; }
-        public string Header { get; set; }
-        public List<MenuItem> Children { get; private set; }
-        public ICommand Command { get; set; }
-
-        public MenuItem(string item)
-        {
-            Text = item;
-            Header = item;
-            Children = new List<MenuItem>();
-        }
-    }
 
 
     /// <summary>
