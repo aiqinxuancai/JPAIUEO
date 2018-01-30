@@ -82,6 +82,15 @@
     </ApplicationDefinition>
     <Compile Include="Service\AppSetting.cs" />
     <Compile Include="Service\Win32.cs" />
+    <Compile Include="View\WindowFullYin.xaml.cs">
+      <DependentUpon>WindowFullYin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WindowFullYinView.xaml.cs">
+      <DependentUpon>WindowFullYinView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WindowFullYinViewCell.xaml.cs">
+      <DependentUpon>WindowFullYinViewCell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WindowMainMenu.xaml.cs">
       <DependentUpon>WindowMainMenu.xaml</DependentUpon>
     </Compile>
@@ -105,6 +114,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\WindowFullYin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WindowFullYinView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WindowFullYinViewCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\WindowMainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

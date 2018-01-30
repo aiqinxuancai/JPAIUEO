@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="JPAIUEO.View.WindowFullYinView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JPAIUEO.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="303.863" Width="560">
+    <Grid>
+
+        <StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" >
+                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
+                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
+                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
+                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
+                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" >
+                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
+                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
+                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
+                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
+                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
+            </StackPanel>
+        </StackPanel>
+
+
+
+
+    </Grid>
+</UserControl>
