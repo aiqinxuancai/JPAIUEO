@@ -17,6 +17,9 @@ namespace JPAIUEO
     {
         public App()
         {
+
+            ////var newInt = (b << 16) | a;
+
             AppSetting.Load();
             YinData.InitData();
             DocData.InitData();

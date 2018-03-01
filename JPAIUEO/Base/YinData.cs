@@ -59,6 +59,7 @@ namespace JPAIUEO.Base
 
         private static void InitFromRoot(JObject root)
         {
+
             if (root == null)
             {
                 return;
