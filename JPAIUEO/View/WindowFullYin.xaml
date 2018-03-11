@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JPAIUEO.View"
         mc:Ignorable="d"
-        Title="WindowFullYin" Height="300" Width="300">
+        Title="WindowFullYin" Height="300" Width="568.455">
     <Grid>
-        
+        <local:WindowFullYinView></local:WindowFullYinView>
     </Grid>
 </Window>

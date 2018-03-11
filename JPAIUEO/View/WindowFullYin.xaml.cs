@@ -23,5 +23,11 @@ namespace JPAIUEO.View
         {
             InitializeComponent();
         }
+
+        public static void Load(object from)
+        {
+            WindowFullYin window = new WindowFullYin();
+            window.Show();
+        }
     }
 }

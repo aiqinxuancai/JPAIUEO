@@ -51,9 +51,12 @@ namespace JPAIUEO
             //MenuItem t = new MenuItem("666");
             //menuMain.ItemsSource = new MenuItem[] { t };
 
-            //WindowAnswerYin.Load(null); //音的提问环节
+            WindowFullYin.Load(null); //音的提问环节
             //var t = new DispatcherTimer(TimeSpan.FromSeconds(5), DispatcherPriority.Normal, Tick, this.Dispatcher);
             //transitioning.Content = new TextBlock { Text = "", SnapsToDevicePixels = true, TextAlignment = TextAlignment.Center };
+
+
+
         }
 
         private void Tick(object sender, EventArgs e)

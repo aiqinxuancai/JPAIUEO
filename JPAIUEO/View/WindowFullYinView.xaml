@@ -5,28 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JPAIUEO.View"
              mc:Ignorable="d" 
-             d:DesignHeight="303.863" Width="560">
+             d:DesignHeight="303.863" Width="583">
     <Grid>
-
-        <StackPanel>
-            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" >
-                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
-                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
-                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
-                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
-                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
-            </StackPanel>
-            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" >
-                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
-                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
-                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
-                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
-                <local:WindowFullYinViewCell Width="110"></local:WindowFullYinViewCell>
-            </StackPanel>
-        </StackPanel>
-
-
-
-
+        <DataGrid x:Name="dataGridMain" AutoGenerateColumns="False" GridLinesVisibility="All" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn MinWidth="5" />
+                <DataGridTemplateColumn Header="" MinWidth="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <local:WindowFullYinViewCell></local:WindowFullYinViewCell>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>
